@@ -6,5 +6,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'trabajoDirectivaApp';
+  titulo = 'Registro de usuarios';
+  mensaje = '';
+  registrado=false;
+  nombre:string='';
+  apellido:string='';
+  entradas: any;
+
+  constructor(){
+    this.entradas=[
+      {titulo:"Python cada día más presente"},
+      {titulo:"Java presente desde hace más de 20 años"},
+      {titulo:"JavaSccript cada vez más funcional"},
+      {titulo:"Kotlin potencia para tus apps"},
+      {titulo:"¿Dónde quedó pascal?"},
+    ]
+  }
+
+  registrarUsuario() {
+
+    this.registrado=true;
+    this.mensaje='usuario registrado con éxito';
+  }
 }
